@@ -414,3 +414,5 @@ MigrationBackup/
 
 # End of https://www.gitignore.io/api/rider,visualstudio,visualstudiocode
 .DS_Store
+
+dockerconfigjson.yaml
