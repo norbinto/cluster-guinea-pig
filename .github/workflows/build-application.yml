@@ -10,6 +10,7 @@ on:
       - main
       - feature/*
 
+
 jobs:
   checkov-job:
     runs-on: ubuntu-latest
@@ -26,7 +27,6 @@ jobs:
           quiet: false # optional: display only failed checks
           framework: kubernetes # optional: run only on a specific infrastructure {cloudformation,terraform,kubernetes,all}
 
-jobs:
   build:
 
     runs-on: ubuntu-latest
