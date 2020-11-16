@@ -11,6 +11,22 @@ on:
       - feature/*
 
 jobs:
+  checkov-job:
+    runs-on: ubuntu-latest
+    name: checkov-action
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@master
+
+      - name: Run Checkov action
+        id: checkov
+        uses: bridgecrewio/checkov-action@master
+        with:
+          directory: example/
+          quiet: false # optional: display only failed checks
+          framework: kubernetes # optional: run only on a specific infrastructure {cloudformation,terraform,kubernetes,all}
+
+jobs:
   build:
 
     runs-on: ubuntu-latest
